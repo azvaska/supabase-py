@@ -5,7 +5,7 @@ from realtime_py.transformers import convert_change_data
 
 
 class SupabaseRealtimeClient:
-    def __init__(self, socket: Type[Socket], schema: str, table_name: str):
+    def __init__(self, socket: Socket, schema: str, table_name: str):
         topic = (
             f"realtime:{schema}"
             if table_name == "*"
